@@ -1,0 +1,7 @@
+- layout + navbar + open sidemenu button (doesn't do anything)
+- sidemenu container + modal effect + sidemenu close button
+- profile card component (avatar, user information)
+- menu section label
+- menu item card (with/without icon)
+- badge
+- view more component
