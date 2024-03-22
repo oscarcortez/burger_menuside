@@ -12,9 +12,8 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
 
   return (
     <>
-      {/* Overlay */}
+      {/* sidemenu bar */}
       {isOpen ? <div className="bg-black/20 fixed w-full h-screen z-10 top-0 left-0"></div> : ""}
-      {/* Side drawer menu */}
       <div
         className={
           isOpen
