@@ -33,7 +33,7 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
               />
             </div>
           </div>
-          <div className="sidemenu-body">{props.children}</div>
+          <div className="sidemenu-body pr-2 pl-2">{props.children}</div>
         </div>
       </div>
       <div className="flex justify-end items-center">
