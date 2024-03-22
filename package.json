@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "css:build": "postcss src/app/css/styles.css -o src/app/css/styles.generated.css --no-map"
   },
   "dependencies": {
     "react": "^18.2.0",
