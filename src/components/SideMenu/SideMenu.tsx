@@ -1,6 +1,7 @@
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import { FunctionComponent, PropsWithChildren, useState } from "react";
 import { ProfileCard } from "../ProfileCard";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 
 const AVATAR_URL = "https://ps.w.org/user-avatar-reloaded/assets/icon-128x128.png?rev=2540745";
 const USERNAME = "JOHN DOE";
@@ -24,8 +25,12 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
         <div className="sidemenu-content">
           <div className="sidemenu-header flex justify-between">
             <ProfileCard avatarImage={AVATAR_URL} profileName={USERNAME} profileEmail={EMAIL} />
-            <div className="flex-shrink-0">
-              <AiOutlineClose onClick={() => setIsOpen(!isOpen)} size={30} className="cursor-pointer" />
+            <div className="flex-shrink-0 py-6 pr-4">
+              <IoIosCloseCircleOutline
+                onClick={() => setIsOpen(!isOpen)}
+                size={25}
+                className="cursor-pointer"
+              />
             </div>
           </div>
           <div className="sidemenu-body">{props.children}</div>
