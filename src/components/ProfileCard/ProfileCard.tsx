@@ -6,12 +6,10 @@ export const ProfileCard = ({
   avatarImage,
   profileName,
   profileEmail,
-  onClose
 }: {
   avatarImage: string
   profileName: string
   profileEmail: string
-  onClose: () => void
 }) => {
   return (
     <>
@@ -25,9 +23,6 @@ export const ProfileCard = ({
             </p>
             <p className="text-gray-600 text-sm text-left">{profileEmail}</p>
           </div>
-        </div>
-        <div className="flex flex-col justify-end items-center">
-          <AiFillCloseCircle size={30} className="cursor-pointer mb-1" onClick={onClose}/>
         </div>
       </div>
     </>
