@@ -1,4 +1,3 @@
-import { ReactNode } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
 
 import { Avatar } from '../Avatar/Avatar'
