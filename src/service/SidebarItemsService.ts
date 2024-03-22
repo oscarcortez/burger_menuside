@@ -4,6 +4,7 @@ import { AiFillFire } from "react-icons/ai";
 interface ListItem {
     icon?: IconType;
     label: string;
+    isTitle?: boolean;
   };
 
 export const items:ListItem[] = [
@@ -14,4 +15,5 @@ export const items:ListItem[] = [
     { label: "Mine beskeder" },
     { label: "Mine oplysninger" },
     { label: "Log ud" },
+    { label: "Kontakt Gul&Gratis", isTitle: true }
   ];
