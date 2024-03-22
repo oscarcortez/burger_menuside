@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
+/*
+TODO: Necesary to use children here. Its not possible to put components into the Navbar
+TODO: Put padding in all the sidebar
+TODO: I think navbar and sidebar should be separated
+*/
 export const NavBar = () => {
   const [nav, setNav] = useState(false)
 
