@@ -1,20 +1,22 @@
 import { ReactNode } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
 
+import { Avatar } from '../Avatar/Avatar'
+
 export const ProfileCard = ({
+  avatarImage,
   profileName,
-  profileEmail,
-  children
+  profileEmail
 }: {
+  avatarImage: string
   profileName: string
   profileEmail: string
-  children: ReactNode
 }) => {
   return (
     <>
       <div className="flex justify-between bg-gray-200 pl-1">
         <div className="flex">
-          {children}
+          <Avatar image={avatarImage} alt={profileName} />
           <span className="mr-3"></span>
           <div className="flex flex-col justify-start">
             <p className="text-gray-900 leading-none font-bold text-left">
