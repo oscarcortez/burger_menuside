@@ -5,11 +5,13 @@ import { Avatar } from '../Avatar/Avatar'
 export const ProfileCard = ({
   avatarImage,
   profileName,
-  profileEmail
+  profileEmail,
+  onClose
 }: {
   avatarImage: string
   profileName: string
   profileEmail: string
+  onClose: () => void
 }) => {
   return (
     <>
@@ -25,7 +27,7 @@ export const ProfileCard = ({
           </div>
         </div>
         <div className="flex flex-col justify-end items-center">
-          <AiFillCloseCircle size={30} className="cursor-pointer mb-1" />
+          <AiFillCloseCircle size={30} className="cursor-pointer mb-1" onClick={onClose}/>
         </div>
       </div>
     </>

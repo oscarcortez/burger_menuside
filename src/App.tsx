@@ -13,10 +13,15 @@ function App() {
     profileName: 'Oscar Cortez'
   }
 
+  const onClose = () => {
+    console.log('close')
+  }
+  
   return (
     <div>
       <NavBar />
       <ProfileCard
+        onClose={onClose}
         avatarImage={profileCard.avatarImage}
         profileEmail={profileCard.profileEmail}
         profileName={profileCard.profileName}
