@@ -9,7 +9,7 @@ export const MenuSectionTitle: FunctionComponent<MenuSectionTitleProps> = ({
 }: MenuSectionTitleProps): ReactNode => {
   return (
     <>
-      <p className="text-gray-900 leading-none text-left mt-2 text-lg font-bold">
+      <p className="text-gray-900 leading-none text-left mt-2 text-lg font-bold mb-2">
         {title}
       </p>
     </>

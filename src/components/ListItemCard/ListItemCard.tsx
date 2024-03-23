@@ -2,19 +2,20 @@ import { FunctionComponent, ReactNode } from 'react'
 import { MenuItemCard } from '../MenuItemCard'
 import { IconType } from 'react-icons'
 import { MenuSectionTitle } from '../MenuSectionTitle'
+import { Badge } from '../Badge'
 
 interface ItemCardProps {
   label: string
   icon?: IconType
   navigateTo?: string
-  isTitle?: boolean
+  type: string
 }
 interface ListItemCardProps {
   items: {
     label: string
     icon?: IconType
     navigateTo?: string
-    isTitle?: boolean
+    type: string
   }[]
 }
 
@@ -23,17 +24,24 @@ export const ListItemCard: FunctionComponent<ListItemCardProps> = ({
 }: ListItemCardProps): ReactNode => {
   return (
     <div className="flex flex-col justify-start">
-      {items.map((item: ItemCardProps) =>
-        item.isTitle ? (
-          <MenuSectionTitle title={item.label} />
-        ) : (
-          <MenuItemCard
-            label={item.label}
-            icon={item.icon}
-            navigateTo={item.navigateTo}
-          />
-        )
-      )}
+      {items.map((item: ItemCardProps) => {
+        switch (item.type) {
+          case 'titleItem':
+            return <MenuSectionTitle title={item.label} />
+          case 'linkItem':
+            return (
+              <MenuItemCard
+                label={item.label}
+                icon={item.icon}
+                navigateTo={item.navigateTo}
+              />
+            )
+          case 'badgeItem':
+            return <Badge label={item.label} navigateTo={item.navigateTo} />
+          default:
+            return null
+        }
+      })}
     </div>
   )
 }
