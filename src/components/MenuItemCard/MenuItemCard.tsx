@@ -1,12 +1,11 @@
 import { IconType } from 'react-icons'
-// import { Link } from "react-router-dom";
 import { FunctionComponent, ReactNode } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 interface MenuItemCardProps {
   icon?: IconType
   label: string
-  navigateTo: string
+  navigateTo?: string
 }
 
 export const MenuItemCard: FunctionComponent<MenuItemCardProps> = ({
@@ -16,7 +15,7 @@ export const MenuItemCard: FunctionComponent<MenuItemCardProps> = ({
 }: MenuItemCardProps): ReactNode => {
   return (
     <>
-      <NavLink to={navigateTo}>
+      <NavLink to={navigateTo || '/'}>
         <div className="flex flex-row justify-start bg-white pt-3 pb-3 pl-2 mb-2">
           {icon && icon({ size: 20, className: 'mr-1' })}
           <p className="text-gray-900 leading-none text-left">{label}</p>

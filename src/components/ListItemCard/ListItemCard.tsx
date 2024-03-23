@@ -6,14 +6,14 @@ import { MenuSectionTitle } from '../MenuSectionTitle'
 interface ItemCardProps {
   label: string
   icon?: IconType
-  navigateTo: string
+  navigateTo?: string
   isTitle?: boolean
 }
 interface ListItemCardProps {
   items: {
     label: string
     icon?: IconType
-    navigateTo: string
+    navigateTo?: string
     isTitle?: boolean
   }[]
 }

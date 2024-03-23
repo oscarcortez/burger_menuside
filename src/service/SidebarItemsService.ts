@@ -4,7 +4,7 @@ import { AiFillFire } from 'react-icons/ai'
 interface ListItem {
   icon?: IconType
   label: string
-  navigateTo: string
+  navigateTo?: string
   isTitle?: boolean
 }
 
@@ -16,5 +16,5 @@ export const items: ListItem[] = [
   { label: 'Mine beskeder', navigateTo: '/' },
   { label: 'Mine oplysninger', navigateTo: '/' },
   { label: 'Log ud', navigateTo: '/' },
-  { label: 'Kontakt Gul&Gratis', navigateTo: '/', isTitle: true }
+  { label: 'Kontakt Gul&Gratis', isTitle: true }
 ]
