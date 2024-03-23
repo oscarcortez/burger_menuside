@@ -7,7 +7,7 @@ import { NavBar } from "./components/NavBar";
 import { Header } from "./components/Header/Header";
 // import { MenuItemCard } from "./components/MenuItemCard";
 
-function App() {
+export default () => {
   return (
     <div className="grid grid-cols-3 gap-4">
       <div className="col-span-1 bg-gray-100 p-4">{/* Columna izquierda */}</div>
@@ -22,9 +22,7 @@ function App() {
           </Routes>
         </Header>
       </div>
-      <div className="col-span-1 bg-gray-100 p-4">{/* Columna derecha */}</div>
     </div>
   );
 }
 
-export default App
