@@ -1,17 +1,15 @@
-import { FunctionComponent, ReactNode } from 'react'
+import { FunctionComponent } from "react"
 
 interface MenuSectionTitleProps {
-  title: string
+    title: string;
 }
 
-export const MenuSectionTitle: FunctionComponent<MenuSectionTitleProps> = ({
-  title
-}: MenuSectionTitleProps): ReactNode => {
+export const MenuSectionTitle: FunctionComponent<MenuSectionTitleProps> = ({title}: MenuSectionTitleProps) => {
   return (
     <>
-      <p className="text-gray-900 leading-none text-left mt-2 text-lg font-bold">
-        {title}
-      </p>
+        <p className="text-gray-900 leading-none text-left mt-2 text-lg font-bold">
+            {title}
+        </p>
     </>
   )
 }
