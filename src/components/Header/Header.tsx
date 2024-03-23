@@ -4,7 +4,7 @@ import { FunctionComponent, PropsWithChildren } from "react";
 }
 export const Header: FunctionComponent<PropsWithChildren<{}>> = (props) => {
   return (
-    <div className="border-2 max-w-[100%] sticky top-0 mx-auto flex justify-end items-center p-4 shadow-sm gap-x-2 sm:gap-x-4 sm:px-4 print:relative">
+    <div className="border-2 w-full flex-grow p-4">
       {props.children}
     </div>
   );
