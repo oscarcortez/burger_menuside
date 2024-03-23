@@ -6,10 +6,16 @@ import { MenuSectionTitle } from '../MenuSectionTitle'
 interface ItemCardProps {
   label: string
   icon?: IconType
+  navigateTo: string
   isTitle?: boolean
 }
 interface ListItemCardProps {
-  items: { label: string; icon?: IconType; isTitle?: boolean }[]
+  items: {
+    label: string
+    icon?: IconType
+    navigateTo: string
+    isTitle?: boolean
+  }[]
 }
 
 export const ListItemCard: FunctionComponent<ListItemCardProps> = ({
@@ -21,7 +27,11 @@ export const ListItemCard: FunctionComponent<ListItemCardProps> = ({
         item.isTitle ? (
           <MenuSectionTitle title={item.label} />
         ) : (
-          <MenuItemCard label={item.label} icon={item.icon} />
+          <MenuItemCard
+            label={item.label}
+            icon={item.icon}
+            navigateTo={item.navigateTo}
+          />
         )
       )}
     </div>
