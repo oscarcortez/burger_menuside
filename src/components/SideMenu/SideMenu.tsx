@@ -11,35 +11,33 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="">
-      {/* sidemenu bar */}
-      {isOpen ? <div className="bg-black/20 fixed w-full h-screen z-10 top-0 left-0"></div> : ""}
-      <div
-        className={
-          isOpen
-            ? "border-2 fixed top-0 right-0 h-screen bg-[#f4f4f4] z-10 duration-300 w-full sm:w-[100%] md:w-[70%] lg:w-[60%] xl:w-[40%]"
-            : "border-2 fixed top-0 right-[-100%] w-0 h-screen bg-[#f4f4f4] z-10 duration-300"
-        }
-      >
-        <div className="sidemenu-content">
-          <div className="sidemenu-header flex justify-between">
-            <ProfileCard avatarImage={AVATAR_URL} profileName={USERNAME} profileEmail={EMAIL} />
-            <div className="flex-shrink-0 py-6 pr-4">
-              <IoIosCloseCircleOutline
-                onClick={() => setIsOpen(!isOpen)}
-                size={25}
-                className="cursor-pointer"
-              />
-            </div>
-          </div>
-          <div className="sidemenu-body pr-2 pl-2">{props.children}</div>
-        </div>
-      </div>
+    <div className="md:w-[50%] p-4 relative border">
+      {isOpen && <div className="fixed inset-0 bg-gray-500 bg-opacity-50 z-10"></div>}
       <div className="flex justify-end items-center">
         <div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
           <AiOutlineMenu size={30} />
         </div>
       </div>
+      <div
+        className={`absolute h-screen top-0 right-0 bottom-0 md:left-auto bg-opacity-25 transition-all duration-300 z-10 ${isOpen ? "w-2/5" : "w-0"}`}
+      >
+        {isOpen && (
+          <div className="sidemenu-content bg-[#f4f4f4]">
+            <div className="flex justify-between h-full p-4">
+              <ProfileCard avatarImage={AVATAR_URL} profileName={USERNAME} profileEmail={EMAIL} />
+              <div className="flex-shrink-0 py-6 pr-4">
+                <IoIosCloseCircleOutline
+                  onClick={() => setIsOpen(!isOpen)}
+                  size={25}
+                  className="cursor-pointer"
+                />
+              </div>
+            </div>
+            <div className="sidemenu-body pr-2 pl-2">{props.children}</div>
+          </div>
+        )}
+      </div>
+      Contenido de la columna 2
     </div>
   );
 };
