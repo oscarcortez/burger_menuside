@@ -22,8 +22,8 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
         className={`absolute h-screen top-0 right-0 bottom-0 md:left-auto bg-opacity-25 transition-all duration-300 z-10 ${isOpen ? "w-2/5" : "w-0"}`}
       >
         {isOpen && (
-          <div className="sidemenu-content bg-[#f4f4f4]">
-            <div className="flex justify-between h-full p-4">
+          <div className="sidemenu-content bg-[#f4f4f4] h-full w-full">
+            <div className="flex justify-between p-4">
               <ProfileCard avatarImage={AVATAR_URL} profileName={USERNAME} profileEmail={EMAIL} />
               <div className="flex-shrink-0 py-6 pr-4">
                 <IoIosCloseCircleOutline
@@ -33,11 +33,10 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
                 />
               </div>
             </div>
-            <div className="sidemenu-body pr-2 pl-2">{props.children}</div>
+            <div className="sidemenu-body pr-3 pl-3">{props.children}</div>
           </div>
         )}
       </div>
-      Contenido de la columna 2
     </div>
   );
 };
