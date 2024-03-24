@@ -5,24 +5,24 @@ import { Route, Routes } from "react-router-dom";
 
 import { NavBar } from "./components/NavBar";
 import { Header } from "./components/Header/Header";
+import ThreeColumnsPage from "./samples/ThreeColumnsPage";
 
 // import { MenuItemCard } from "./components/MenuItemCard";
 
 export default () => {
   return (
-    <div className="grid grid-cols-3 gap-4">
-      <div className="col-span-1 bg-gray-100 p-4">{/* Columna izquierda */}</div>
-      <div className="col-span-2 bg-gray-200 p-4">
-        <Header>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<h1>home</h1>} />
-            <Route path="about" element={<h1>about</h1>} />
-            <Route path="services" element={<h1>services</h1>} />
-            <Route path="contact" element={<h1>contact</h1>} />
-          </Routes>
-        </Header>
-      </div>
+    <div className="flex flex-col md:flex-row justify-between relative">
+      <div className="md:w-[10%] p-4 relative"></div>
+      <NavBar>
+        <Routes>
+          <Route path="/" element={<h1>home</h1>} />
+          <Route path="about" element={<h1>about</h1>} />
+          <Route path="services" element={<h1>services</h1>} />
+          <Route path="contact" element={<h1>contact</h1>} />
+        </Routes>
+      </NavBar>
+      <div className="md:w-[10%] p-4 relative"></div>
     </div>
+    // <ThreeColumnsPage />
   );
 };

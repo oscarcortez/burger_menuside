@@ -1,8 +1,9 @@
-import { SideMenu } from '../SideMenu/SideMenu'
-import { ListItemCard } from '../ListItemCard'
-import { Accordion } from '../Accordion'
+import { SideMenu } from "../SideMenu/SideMenu";
+import { ListItemCard } from "../ListItemCard";
+import { Accordion } from "../Accordion";
 
-import { items, seeMoreItems } from '../../service/SidebarItemsService'
+import { items, seeMoreItems } from "../../service/SidebarItemsService";
+import { FunctionComponent, PropsWithChildren } from "react";
 
 /*
 TODO: Necesary to use children here. Its not possible to put components into the Navbar
@@ -10,17 +11,13 @@ TODO: Put padding in all the sidebar
 TODO: I think navbar and sidebar should be separated
 */
 
-export const NavBar: React.FC = () => {
+export const NavBar: FunctionComponent<PropsWithChildren<{}>> = () => {
   return (
-    <>
-      <div className="border-2 p-4 sticky top-0 flex min-h-6 w-full max-w-[100vw] transform-gpu flex-wrap justify-end items-center gap-x-2 px-2 sm:gap-x-4 sm:px-4 print:relative">
-        <SideMenu>
-          <ListItemCard items={items} />
-          <Accordion title="Se Mere">
-            <ListItemCard items={seeMoreItems} />
-          </Accordion>
-        </SideMenu>
-      </div>
-    </>
-  )
-}
+    <SideMenu>
+      <ListItemCard items={items} />
+      <Accordion title="Se Mere">
+        <ListItemCard items={seeMoreItems} />
+      </Accordion>
+    </SideMenu>
+  );
+};
