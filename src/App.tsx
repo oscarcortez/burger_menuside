@@ -1,23 +1,28 @@
-import './App.css'
-import './styles.css'
+import "./App.css";
+import "./styles.css";
 
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from "react-router-dom";
 
-import { NavBar } from './components/NavBar'
+import { NavBar } from "./components/NavBar";
+import { Header } from "./components/Header/Header";
+import ThreeColumnsPage from "./samples/ThreeColumnsPage";
+
 // import { MenuItemCard } from "./components/MenuItemCard";
 
-function App() {
+export default () => {
   return (
-    <div>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<h1>home</h1>} />
-        <Route path="about" element={<h1>about</h1>} />
-        <Route path="services" element={<h1>services</h1>} />
-        <Route path="contact" element={<h1>contact</h1>} />
-      </Routes>
+    <div className="flex flex-col md:flex-row justify-between relative">
+      <div className="md:w-[10%] p-4 relative"></div>
+      <NavBar>
+        <Routes>
+          <Route path="/" element={<h1>home</h1>} />
+          <Route path="about" element={<h1>about</h1>} />
+          <Route path="services" element={<h1>services</h1>} />
+          <Route path="contact" element={<h1>contact</h1>} />
+        </Routes>
+      </NavBar>
+      <div className="md:w-[10%] p-4 relative"></div>
     </div>
-  )
-}
-
-export default App
+    // <ThreeColumnsPage />
+  );
+};
