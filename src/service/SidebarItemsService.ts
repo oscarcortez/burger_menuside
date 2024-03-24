@@ -47,10 +47,100 @@ export const items: ListItem[] = [
     label: 'Kundeservice',
     navigateTo: '/services',
     type: ListItemType.LinkItem
+  }
+]
+
+export const seeMoreItems = [
+  { label: 'Find os ogsa her', type: ListItemType.Title },
+  {
+    label: 'App til iPhone/iPad',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
   },
   {
-    label: 'Annoncering',
-    navigateTo: '/services',
+    label: 'Blog',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Facebook',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Instagram',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Facebook',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'TikTok',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Gul&Gratis e-avis',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  { label: 'Gul&Gratis', type: ListItemType.Title },
+  {
+    label: 'Forside',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Min Side',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Kategorioversigt',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'MitID Validering',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Brugervilkar',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Privatlivspolitik',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Cookieindstillinger',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Vilkar for erhverv',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Whistleblowerordning',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Samarbejdspartnere',
+    navigateTo: '/',
+    type: ListItemType.LinkItem
+  },
+  {
+    label: 'Annoncebetalt indhold',
+    navigateTo: '/',
     type: ListItemType.LinkItem
   }
 ]
