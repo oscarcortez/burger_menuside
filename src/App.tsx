@@ -5,9 +5,6 @@ import { Route, Routes } from "react-router-dom";
 
 import { NavBar } from "./components/NavBar";
 import { Header } from "./components/Header/Header";
-import Sidebar from "./samples/SideBar";
-import SideBarEx from "./samples/SideBarEx";
-import OtherSideBar from "./samples/OtherSideBar";
 
 // import { MenuItemCard } from "./components/MenuItemCard";
 
