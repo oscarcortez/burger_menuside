@@ -11,7 +11,7 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <>
+    <div className="">
       {/* sidemenu bar */}
       {isOpen ? <div className="bg-black/20 fixed w-full h-screen z-10 top-0 left-0"></div> : ""}
       <div
@@ -40,6 +40,6 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
           <AiOutlineMenu size={30} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
