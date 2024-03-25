@@ -20,7 +20,7 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
       </div>
       <div
         // className={`absolute h-screen top-0 bottom-0 right-0 bg-opacity-25 transition-all duration-300 z-10 ${isOpen ? "sm:w-[100%] md:w-[100%] lg:w-[40%] xl:w-[40%]" : "w-0"}`}
-        className={`absolute h-screen top-0 bottom-0 right-0 bg-opacity-25 transition-all duration-300 z-10 ${isOpen ? "sm:w-full md:w-full lg:w-1/4 xl:w-1/4" : "w-0"}`}
+        className={`absolute h-screen top-0 bottom-0 right-0 bg-opacity-25 transition-all duration-300 z-10 ${isOpen ? "sm:w-full md:w-2/5 lg:w-2/5 xl:w-2/5" : "w-0"}`}
       >
         {isOpen && (
           <div className="sidemenu-content bg-[#f4f4f4]">
