@@ -11,7 +11,7 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="w-full h-full p-4 relative border">
+    <>
       {isOpen && <div className="fixed inset-0 bg-gray-500 bg-opacity-50 z-10"></div>}
       <div className="flex justify-end">
         <div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
@@ -25,7 +25,7 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
         {isOpen && (
           <div className="sidemenu-content bg-[#f4f4f4]">
             <div className="flex justify-between">
-              <ProfileCard avatarImage={AVATAR_URL} profileName={USERNAME} profileEmail={EMAIL} />
+              {/* <ProfileCard avatarImage={AVATAR_URL} profileName={USERNAME} profileEmail={EMAIL} /> */}
               <div className="flex-shrink-0 py-6 pr-4">
                 <IoIosCloseCircleOutline
                   onClick={() => setIsOpen(!isOpen)}
@@ -38,6 +38,6 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
           </div>
         )}
       </div>
-    </div>
+    </>
   );
 };
