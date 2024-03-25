@@ -11,7 +11,7 @@ import ThreeColumnsPage from "./samples/ThreeColumnsPage";
 
 export default () => {
   return (
-    <div className="flex flex-col md:flex-row h-screen relative">
+    <div className="flex flex-row h-screen relative">
       <div className="md:w-1/3 relative border"></div>
       <NavBar>
         <Routes>
