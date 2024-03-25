@@ -1,16 +1,18 @@
-import { capitalize } from '../../utils'
 import { FunctionComponent, ReactNode } from 'react'
+import { AiOutlineCloseCircle } from 'react-icons/ai'
 
 interface ProfileCardProps {
   avatarImage: string
   profileName: string
   profileEmail: string
+  onClose: () => void
 }
 
 export const ProfileCard: FunctionComponent<ProfileCardProps> = ({
   avatarImage,
   profileName,
-  profileEmail
+  profileEmail,
+  onClose
 }): ReactNode => {
   return (
     <>
@@ -23,12 +25,19 @@ export const ProfileCard: FunctionComponent<ProfileCardProps> = ({
           />
           <div className="flex flex-col justify-start ml-2 p-1">
             <p className="text-gray-900 leading-none font-bold text-left">
-              {capitalize(profileName)}
+              {profileName}
             </p>
             <p className="text-gray-400 text-sm text-left py-1">
-              {capitalize(profileEmail)}
+              {profileEmail}
             </p>
           </div>
+        </div>
+        <div className="flex-shrink-0 py-6 pr-4">
+          <AiOutlineCloseCircle
+            onClick={onClose}
+            size={25}
+            className="cursor-pointer"
+          />
         </div>
       </div>
     </>

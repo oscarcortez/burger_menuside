@@ -25,7 +25,7 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
         {isOpen && (
           <div className="sidemenu-content bg-[#f4f4f4]">
             <div className="flex justify-between">
-              <ProfileCard avatarImage={AVATAR_URL} profileName={USERNAME} profileEmail={EMAIL} />
+              {/* <ProfileCard avatarImage={AVATAR_URL} profileName={USERNAME} profileEmail={EMAIL} /> */}
               <div className="flex-shrink-0 py-6 pr-4">
                 <IoIosCloseCircleOutline
                   onClick={() => setIsOpen(!isOpen)}
