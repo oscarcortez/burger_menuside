@@ -1,38 +1,33 @@
-import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import { AiOutlineMenu } from 'react-icons/ai'
-
-import { NavBar } from './components/NavBar'
-import { MainContent } from './components/MainContent'
-import { RightSidebar } from './components/RightSidebar'
-import { ListItemCard } from './components/ListItemCard'
-import { Accordion } from './components/Accordion'
-import { ProfileCard } from './components/ProfileCard'
-
-import {
-  items,
-  seeMoreItems,
-  profileValues
-} from './service/SidebarItemsService'
-import { listRoutes } from './service/RoutesService'
-
-import './App.css'
+import "./App.css";
 // import "./styles.css";
 
-const App = () => {
-  const [isVisibleRightSidebar, setIsVisibleRightSidebar] =
-    useState<boolean>(false)
+import { Route, Routes } from "react-router-dom";
+
+import { NavBar } from "./components/NavBar";
+import { MainContent } from "./components/MainContent";
+import { AiOutlineMenu } from "react-icons/ai";
+import { useState } from "react";
+import { RightSidebar } from "./components/RightSidebar";
+import { ListItemCard } from "./components/ListItemCard";
+import { Accordion } from "./components/Accordion";
+import { ProfileCard } from "./components/ProfileCard";
+
+import { items, seeMoreItems, profileValues } from "./service/SidebarItemsService";
+import { listRoutes } from "./service/RoutesService";
+
+export default () => {
+  const [isVisibleRightSidebar, setIsVisibleRightSidebar] = useState<boolean>(false);
   return (
     <div className="flex flex-row h-screen relative">
       <div className="md:w-1/3 relative border"></div>
       <MainContent>
         <NavBar
           rightMenuIcon={<AiOutlineMenu size={30} />}
-          onClickRightMenuIcon={() => {
-            setIsVisibleRightSidebar(true)
-          }}
+          onClickRightMenuIcon={() => { setIsVisibleRightSidebar(true) }}
         />
-        <RightSidebar isVisible={isVisibleRightSidebar}>
+        <RightSidebar
+          isVisible={isVisibleRightSidebar}
+        >
           <ProfileCard
             avatarImage={profileValues.avatarImage}
             profileName={profileValues.name}
@@ -51,8 +46,7 @@ const App = () => {
         </Routes>
       </MainContent>
       <div className="md:w-1/3 relative border"></div>
-    </div>
-  )
-}
-
-export default App
+    </div >
+    // <ThreeColumnsPage />
+  );
+};
