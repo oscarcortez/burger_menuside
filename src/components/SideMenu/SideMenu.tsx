@@ -11,7 +11,7 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="w-full h-full p-4 relative border">
+    <>
       {isOpen && <div className="fixed inset-0 bg-gray-500 bg-opacity-50 z-10"></div>}
       <div className="flex justify-end">
         <div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
@@ -38,6 +38,6 @@ export const SideMenu: FunctionComponent<PropsWithChildren<{}>> = (props) => {
           </div>
         )}
       </div>
-    </div>
+    </>
   );
 };
