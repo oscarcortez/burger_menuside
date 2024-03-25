@@ -11,8 +11,8 @@ import ThreeColumnsPage from "./samples/ThreeColumnsPage";
 
 export default () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between relative">
-      <div className="sm:w-[100%] md:w-[70%] lg:w-[60%] xl:w-[40%] p-4 relative"></div>
+    <div className="flex flex-col md:flex-row h-screen relative">
+      <div className="md:w-1/3 relative border"></div>
       <NavBar>
         <Routes>
           <Route path="/" element={<h1>home</h1>} />
@@ -21,7 +21,7 @@ export default () => {
           <Route path="contact" element={<h1>contact</h1>} />
         </Routes>
       </NavBar>
-      <div className="sm:w-[100%] md:w-[70%] lg:w-[60%] xl:w-[40%] p-4 relative"></div>
+      <div className="md:w-1/3 relative border"></div>
     </div>
     // <ThreeColumnsPage />
   );
