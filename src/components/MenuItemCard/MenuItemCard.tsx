@@ -1,6 +1,6 @@
-import { IconType } from "react-icons";
-import { FunctionComponent, ReactNode } from "react";
-import { NavLink } from "react-router-dom";
+import { IconType } from 'react-icons'
+import { FunctionComponent, ReactNode } from 'react'
+import { NavLink } from 'react-router-dom'
 
 interface MenuItemCardProps {
   icon?: IconType;
@@ -22,5 +22,5 @@ export const MenuItemCard: FunctionComponent<MenuItemCardProps> = ({
         </div>
       </NavLink>
     </>
-  );
-};
+  )
+}
