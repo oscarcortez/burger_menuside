@@ -16,7 +16,7 @@ export const MenuItemCard: FunctionComponent<MenuItemCardProps> = ({
   return (
     <>
       <NavLink to={navigateTo || "/"}>
-        <div className="flex flex-row justify-start bg-white pt-6 pb-6 pl-3 mb-2">
+        <div className="flex flex-row justify-start bg-white py-5 pl-3 mb-2">
           {icon && icon({ size: 20, className: "mr-1" })}
           <p className="text-gray-900 leading-none text-left">{label}</p>
         </div>
